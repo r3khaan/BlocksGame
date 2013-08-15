@@ -23,7 +23,7 @@ public class Craft {
 	public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
         if (key == KeyEvent.VK_SPACE) {
-        		
+        		fire();
         }
     }
 }

@@ -12,6 +12,8 @@ import javax.swing.Timer;
 public class Core extends JPanel implements ActionListener {
 	Timer updater;
 	PlayerBlock player;
+	Craft craft;
+	
 	public Core() {
 		
 		addKeyListener(new TAdapter());
@@ -20,9 +22,9 @@ public class Core extends JPanel implements ActionListener {
         updater.start();
 
     }
-	public void Initialize() {
+	private void Initialize() {
 		updater = new Timer(16, this);
-
+		craft = new Craft();
 		player = new PlayerBlock(50, 50);
 
 	}
@@ -47,6 +49,7 @@ public class Core extends JPanel implements ActionListener {
 
         public void keyPressed(KeyEvent e) {
             player.keyPressed(e);
+            craft.keyPressed(e);
         }
     }
 

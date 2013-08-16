@@ -21,7 +21,7 @@ public class PlayerBlock{
 		xpos = x;
 		ypos = y;
 		
-		direction = "";
+		direction = "right";
 	}
 	
 	public Image getImage() {
@@ -32,6 +32,10 @@ public class PlayerBlock{
 	}
 	public int getY() {
 		return ypos;
+	}
+	
+	public String getDirection() {
+		return direction;
 	}
 	
 	public void move() {

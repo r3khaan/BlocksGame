@@ -13,7 +13,7 @@ public class Missile {
 	
 	public Missile(int x, int y, String dir) {
 		_direction = dir;
-		_speed = 1;
+		_speed = 7;
 		_visible = true;
 		_boardWidth = 400;
 		_xpos = x;
@@ -46,12 +46,17 @@ public class Missile {
 	public boolean isVisible() {
 		return _visible;
 	}
+
 	
 	public void move() {
 		if (_xpos > _boardWidth || _xpos < 0) {
 			_visible = false;
 		} else {
-			_xpos += _speed;
+			if (_direction.equals("right")) {
+				_xpos += _speed;
+			} else {
+				_xpos -= _speed;
+			}
 		}
 	}
 	
